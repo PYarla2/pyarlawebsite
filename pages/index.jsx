@@ -54,7 +54,7 @@ const Portfolio = () => {
           <Twitter size={20} />
         </a>
         <a 
-          href="https://linkedin.com/in/pavithra-yarlagadda" 
+          href="https://linkedin.com/in/pyarla" 
           target="_blank" 
           rel="noopener noreferrer"
           className={`p-2 rounded-full transition-all duration-300 ${
