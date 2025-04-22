@@ -110,6 +110,45 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* Founder Section */}
+      <section id="founder" className="py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className={`text-4xl font-bold mb-8 ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}>Founder</h2>
+          <div className={`${theme === 'dark' ? 'bg-gray-800' : 'bg-white shadow-lg'} p-8 rounded-lg`}>
+            <div className="mb-6">
+              <h3 className={`text-2xl font-bold mb-2 ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}>
+                VoyJourno
+                <a 
+                  href="https://voyjourno.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm ml-2 hover:underline"
+                >
+                  @voyjourno.com
+                </a>
+              </h3>
+              <p className={`text-xl ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
+                Co-founded a travel coordination platform for destination weddings, building a minimalist web app to automate group travel itineraries. Grew a waitlist through cold outreach, pitched at Forge in Chicago, and won an award at the Cozad New Venture Challenge at UIUC. Currently in beta, refining features with planner feedback.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className={`text-sm px-2 py-1 ${theme === 'dark' ? 'bg-gray-700 text-blue-300' : 'bg-gray-100 text-blue-600'} rounded`}>
+                Entrepreneurship
+              </span>
+              <span className={`text-sm px-2 py-1 ${theme === 'dark' ? 'bg-gray-700 text-blue-300' : 'bg-gray-100 text-blue-600'} rounded`}>
+                Web Development
+              </span>
+              <span className={`text-sm px-2 py-1 ${theme === 'dark' ? 'bg-gray-700 text-blue-300' : 'bg-gray-100 text-blue-600'} rounded`}>
+                Product Management
+              </span>
+              <span className={`text-sm px-2 py-1 ${theme === 'dark' ? 'bg-gray-700 text-blue-300' : 'bg-gray-100 text-blue-600'} rounded`}>
+                Startup Development
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section with Hover Effects */}
       <section className={`py-20 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'}`}>
         <div className="max-w-4xl mx-auto px-4">
