@@ -110,6 +110,77 @@ const Portfolio = () => {
         </div>
       </section>
 
+      
+
+      {/* Projects Section with Hover Effects */}
+      <section className={`py-20 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'}`}>
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className={`text-4xl font-bold mb-12 ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}>Featured Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "GitHub Commit Parser & Storybook Generator",
+                tech: "Python, GitHub API, OpenAI, React, Supabase",
+                description: "I built a tool that parses the entire commit history of a GitHub repository and automatically generates an interactive timeline of how the project evolved over time. It clusters changes by theme, surfaces major architecture shifts, and gives plain-language summaries powered by OpenAI. I focused on parsing diffs, organizing data with Supabase, and rendering the storybook with React. This helps engineers onboard faster and understand large codebases intuitively.",
+                link: "#"
+              },
+              {
+                title: "SparkVibe – AI-Powered Motivational SMS Tool",
+                tech: "Python, OpenAI, Twilio, Supabase, OAuth, React",
+                description: "SparkVibe is an AI-based SMS system that sends daily or weekly motivational messages based on user-defined goals. I led the backend development, integrating OpenAI for generating messages, Twilio for SMS delivery, and Supabase for authentication and scheduling logic. The system works automatically after setup, with no need for ongoing user engagement. It's lightweight, fast, and keeps users accountable in a low-friction way.",
+                link: "#"
+              },
+              {
+                title: "Financial Analysis Tool",
+                tech: "Python, NLP, Langchain, Open AI",
+                description: "Developing an AI-driven financial analysis tool using Langchain for NLP and Streamlit for interactive user interface",
+                link: "#"
+              },
+              {
+                title: "On-Premise vs Cloud Servers Research",
+                tech: "AWS, Python",
+                description: "Researched speed differences between on-premise and cloud servers, certified by IMSA. Implemented comprehensive testing methodologies to analyze performance metrics.",
+                link: "#"
+              },
+              {
+                title: "LoCative - Destination Recommender",
+                tech: "JavaScript, HTML, CSS, MySQL",
+                description: "Developed a nationally qualified Lake County destination recommendation program. Created an intuitive interface for users to discover local attractions.",
+                link: "#"
+              },
+              {
+                title: "UIUC Project: Code Investment Analysis",
+                tech: "Python, Machine Learning, Financial APIs",
+                description: "Leading development of investment sentiment analysis tools. Building automated systems for market trend analysis and prediction.",
+                link: "#"
+              }
+            ].map((project, index) => (
+              <div 
+                key={index} 
+                className={`group relative ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'} p-6 rounded-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer`}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity"></div>
+                <h3 className={`text-2xl font-bold mb-3 ${theme === 'dark' ? 'group-hover:text-blue-400' : 'group-hover:text-blue-600'} transition-colors`}>
+                  {project.title}
+                </h3>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.tech.split(', ').map((tech, techIndex) => (
+                    <span 
+                      key={techIndex}
+                      className={`text-sm px-2 py-1 ${theme === 'dark' ? 'bg-gray-800 text-blue-300' : 'bg-gray-100 text-blue-600'} rounded`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <p className={`${theme === 'dark' ? 'text-gray-300 group-hover:text-gray-100' : 'text-gray-600 group-hover:text-gray-900'} transition-colors`}>
+                  {project.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Founder Section */}
       <section id="founder" className="py-20">
         <div className="max-w-4xl mx-auto px-4">
@@ -145,76 +216,6 @@ const Portfolio = () => {
                 Startup Development
               </span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section with Hover Effects */}
-      <section className={`py-20 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'}`}>
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className={`text-4xl font-bold mb-12 ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}>Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "AI-Powered Investment Banker",
-                tech: "Python, NLP, Langchain, Open AI",
-                description: "Developing an AI-driven financial analysis tool using Langchain for NLP and Streamlit for interactive user interface",
-                link: "#"
-              },
-              {
-                title: "On-Premise vs Cloud Servers Research",
-                tech: "AWS, Python",
-                description: "Researched speed differences between on-premise and cloud servers, certified by IMSA. Implemented comprehensive testing methodologies to analyze performance metrics.",
-                link: "#"
-              },
-              {
-                title: "LoCative - Destination Recommender",
-                tech: "JavaScript, HTML, CSS, MySQL",
-                description: "Developed a nationally qualified Lake County destination recommendation program. Created an intuitive interface for users to discover local attractions.",
-                link: "#"
-              },
-              {
-                title: "UIUC Project: Code Investment Analysis",
-                tech: "Python, Machine Learning, Financial APIs",
-                description: "Leading development of investment sentiment analysis tools. Building automated systems for market trend analysis and prediction.",
-                link: "#"
-              },
-              {
-                title: "10x Labs Innovation Projects",
-                tech: "Various Technologies",
-                description: "Contributing to strategic planning and technical development of innovative solutions. Collaborating with cross-functional teams on feature implementation.",
-                link: "#"
-              },
-              {
-                title: "Portfolio Website",
-                tech: "React, Next.js, TailwindCSS",
-                description: "Designed and developed a responsive personal portfolio website showcasing projects and skills using modern web technologies.",
-                link: "#"
-              }
-            ].map((project, index) => (
-              <div 
-                key={index} 
-                className={`group relative ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'} p-6 rounded-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer`}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 rounded-lg transition-opacity"></div>
-                <h3 className={`text-2xl font-bold mb-3 ${theme === 'dark' ? 'group-hover:text-blue-400' : 'group-hover:text-blue-600'} transition-colors`}>
-                  {project.title}
-                </h3>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tech.split(', ').map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className={`text-sm px-2 py-1 ${theme === 'dark' ? 'bg-gray-800 text-blue-300' : 'bg-gray-100 text-blue-600'} rounded`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <p className={`${theme === 'dark' ? 'text-gray-300 group-hover:text-gray-100' : 'text-gray-600 group-hover:text-gray-900'} transition-colors`}>
-                  {project.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
